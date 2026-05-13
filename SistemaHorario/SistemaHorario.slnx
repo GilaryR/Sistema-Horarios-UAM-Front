@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../SistemaHorarios.Application/SistemaHorarios.Application.csproj" Id="facfecbb-bb29-473f-bb38-2861ff4c7845" />
+  <Project Path="../SistemaHorarios.Domain/SistemaHorarios.Domain.csproj" Id="444fb267-133e-4ec1-bcac-2a1b00801bfe" />
+  <Project Path="../SistemaHorarios.Infrastructure/SistemaHorarios.Infrastructure.csproj" Id="9c24f2c6-5f60-44d9-9270-ea85c87edcdd" />
+  <Project Path="SistemaHorario.UI.csproj" />
+</Solution>
