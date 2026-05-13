@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaHorarios.Infrastructure.Services
+namespace SistemaHorarios.Application.Interfaces
 {
-    internal class UsuarioService
+    internal interface ISistemaHorariosApiService
     {
     }
 }

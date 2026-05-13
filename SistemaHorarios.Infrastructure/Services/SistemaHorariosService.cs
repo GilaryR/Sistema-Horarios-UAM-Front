@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaHorarios.Infrastructure.Services
 {
-    internal class HorarioService
+    internal class SistemaHorariosService
     {
     }
 }

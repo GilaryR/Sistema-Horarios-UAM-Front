@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaHorarios.Application.Interfaces
+namespace SistemaHorarios.Infrastructure.Api
 {
-    internal interface IHorarioService
+    internal class Config
     {
     }
 }
