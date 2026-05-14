@@ -28,10 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            lblTitulo = new Label();
+            SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(74, 231);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(201, 48);
+            lblTitulo.TabIndex = 2;
+            lblTitulo.Text = "Editar Perfil";
+            // 
+            // UcEditarPerfil
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lblTitulo);
+            Name = "UcEditarPerfil";
+            Size = new Size(484, 511);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitulo;
     }
 }

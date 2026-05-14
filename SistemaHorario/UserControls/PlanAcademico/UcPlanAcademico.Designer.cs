@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            lblTitulo = new Label();
+            SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(156, 271);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(273, 48);
+            lblTitulo.TabIndex = 2;
+            lblTitulo.Text = "Plan Académico";
+            // 
+            // UcPlanAcademico
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(lblTitulo);
+            Name = "UcPlanAcademico";
+            Size = new Size(648, 591);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitulo;
     }
 }

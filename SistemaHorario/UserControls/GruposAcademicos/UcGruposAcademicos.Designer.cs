@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            lblTitulo = new Label();
+            SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(247, 309);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(336, 48);
+            lblTitulo.TabIndex = 1;
+            lblTitulo.Text = "Grupos Académicos";
+            // 
+            // UcGruposAcademicos
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(lblTitulo);
+            Name = "UcGruposAcademicos";
+            Size = new Size(663, 667);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitulo;
     }
 }
