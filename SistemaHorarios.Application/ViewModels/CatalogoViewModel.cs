@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaHorarios.Infrastructure.DTOs.Catalogos
+namespace SistemaHorarios.Application.ViewModels
 {
-    public class CatalogoDto
+    public class CatalogoViewModel
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
