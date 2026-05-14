@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaHorarios.Infrastructure.Api
 {
-    internal class Config
+    public static class Config
     {
+        public const string ApiHost = "https://localhost:7208";
+        public const string ApiPrefix = "/api";
+
+        public static string BaseUrl => $"{ApiHost}{ApiPrefix}/";
     }
 }

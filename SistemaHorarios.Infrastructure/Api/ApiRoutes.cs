@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaHorarios.Infrastructure.Api
 {
-    internal class ApiRoutes
+    public static class ApiRoutes
     {
+        public static class Catalogos
+        {
+            public const string Jornadas = "catalogos/jornadas";
+        }
     }
 }

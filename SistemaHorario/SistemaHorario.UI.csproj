@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SistemaHorarios.Application\SistemaHorarios.Application.csproj" />
+    <ProjectReference Include="..\SistemaHorarios.Domain\SistemaHorarios.Domain.csproj" />
+    <ProjectReference Include="..\SistemaHorarios.Infrastructure\SistemaHorarios.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

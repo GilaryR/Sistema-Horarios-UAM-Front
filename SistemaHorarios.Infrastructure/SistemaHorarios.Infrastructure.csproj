@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaHorarios.Application\SistemaHorarios.Application.csproj" />
+    <ProjectReference Include="..\SistemaHorarios.Domain\SistemaHorarios.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
