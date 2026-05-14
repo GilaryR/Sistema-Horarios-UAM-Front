@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            lblTitulo = new Label();
+            SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI Historic", 12F);
+            lblTitulo.Location = new Point(166, 213);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(170, 32);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Coordinadores";
+            // 
+            // UcCoordinadores
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(lblTitulo);
+            Name = "UcCoordinadores";
+            Size = new Size(802, 569);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitulo;
     }
 }
