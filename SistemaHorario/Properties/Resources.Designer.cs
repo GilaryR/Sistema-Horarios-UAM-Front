@@ -73,6 +73,36 @@ namespace SistemaHorario.UI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IcAdvertencia {
+            get {
+                object obj = ResourceManager.GetObject("IcAdvertencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IcAdvertenciaR {
+            get {
+                object obj = ResourceManager.GetObject("IcAdvertenciaR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IcCerrar {
+            get {
+                object obj = ResourceManager.GetObject("IcCerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IcCerrarsesion {
             get {
                 object obj = ResourceManager.GetObject("IcCerrarsesion", resourceCulture);
@@ -86,6 +116,16 @@ namespace SistemaHorario.UI.Properties {
         internal static System.Drawing.Bitmap IcCoordinadores {
             get {
                 object obj = ResourceManager.GetObject("IcCoordinadores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IcCorrecto {
+            get {
+                object obj = ResourceManager.GetObject("IcCorrecto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
