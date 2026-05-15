@@ -163,12 +163,13 @@
             // 
             // txtContrasena
             // 
-            txtContrasena.Font = new Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContrasena.Font = new Font("Segoe UI Historic", 7F);
             txtContrasena.Location = new Point(37, 327);
             txtContrasena.Name = "txtContrasena";
             txtContrasena.PlaceholderText = "Ingresa tu contraseña";
-            txtContrasena.Size = new Size(397, 31);
+            txtContrasena.Size = new Size(397, 26);
             txtContrasena.TabIndex = 7;
+            txtContrasena.UseSystemPasswordChar = true;
             // 
             // lblContrasena
             // 

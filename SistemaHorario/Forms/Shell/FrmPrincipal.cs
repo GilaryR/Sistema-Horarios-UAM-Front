@@ -178,7 +178,7 @@ namespace SistemaHorario.UI.Forms.Shell
         /// También recalcula su tamaño, color de fondo y posición para mostrarlo
         /// alineado hacia la parte superior derecha de la ventana.
         /// </remarks>
-        private void TopBar_MenuUsuarioClick(object sender, EventArgs e)
+        private void TopBar_MenuUsuarioClick(object? sender, EventArgs e)
         {
             if (userMenuDropdown.Parent != this)
             {
@@ -210,7 +210,7 @@ namespace SistemaHorario.UI.Forms.Shell
         /// <remarks>
         /// Carga la pantalla de perfil del usuario dentro del panel principal de contenido.
         /// </remarks>
-        private void UserMenuDropdown_MiPerfilClick(object sender, EventArgs e)
+        private void UserMenuDropdown_MiPerfilClick(object? sender, EventArgs e)
         {
             CargarPantalla(new UcPerfil());
         }
@@ -233,7 +233,7 @@ namespace SistemaHorario.UI.Forms.Shell
         /// se muestra nuevamente el formulario de inicio de sesión y se cierra la instancia actual
         /// del formulario principal.
         /// </remarks>
-        private void UserMenuDropdown_CerrarSesionClick(object sender, EventArgs e)
+        private void UserMenuDropdown_CerrarSesionClick(object? sender, EventArgs e)
         {
             userMenuDropdown.Visible = false;
 
