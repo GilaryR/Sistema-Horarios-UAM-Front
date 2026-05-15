@@ -8,26 +8,68 @@ using System.Windows.Forms;
 
 namespace SistemaHorario.UI.Controls
 {
+    /// <summary>
+    /// Representa el menú lateral principal del sistema.
+    /// </summary>
+    /// <remarks>
+    /// Permite navegar entre los diferentes módulos de la aplicación,
+    /// gestionar el estado visual del elemento seleccionado y emitir eventos
+    /// cuando el usuario selecciona una opción del menú.
+    /// </remarks>
     public partial class Sidebar : UserControl
     {
         private readonly Color colorNormal = Color.FromArgb(76, 94, 113);
         private readonly Color colorHover = Color.FromArgb(0, 106, 166);
         private readonly Color colorActivo = Color.FromArgb(0, 106, 166);
 
-        private Panel panelActivo;
+
+        /// <summary>
+        /// Panel actualmente seleccionado dentro del menú lateral.
+        /// </summary>
+        private Panel? panelActivo;
+
+        /// <summary>
+        /// Conjunto de paneles que representan las opciones del menú.
+        /// </summary>
         private Panel[] itemsMenu;
 
-        public event EventHandler InicioClick;
-        public event EventHandler PlanAcademicoClick;
-        public event EventHandler MateriasClick;
-        public event EventHandler DocentesClick;
-        public event EventHandler GruposAcademicosClick;
-        public event EventHandler CoordinadoresClick;
-        public event EventHandler HorariosClick;
-        public event EventHandler ReportesClick;
-        public event EventHandler HistorialCambiosClick;
-        public event EventHandler ManualClick;
+        /// <summary>Evento que se ejecuta al seleccionar Inicio.</summary>
+        public event EventHandler? InicioClick;
 
+        /// <summary>Evento que se ejecuta al seleccionar Plan Académico.</summary>
+        public event EventHandler? PlanAcademicoClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Materias.</summary>
+        public event EventHandler? MateriasClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Docentes.</summary>
+        public event EventHandler? DocentesClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Grupos Académicos.</summary>
+        public event EventHandler? GruposAcademicosClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Coordinadores.</summary>
+        public event EventHandler? CoordinadoresClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Horarios.</summary>
+        public event EventHandler? HorariosClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Reportes.</summary>
+        public event EventHandler? ReportesClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Historial de Cambios.</sumary>
+        public event EventHandler? HistorialCambiosClick;
+
+        /// <summary>Evento que se ejecuta al seleccionar Manual.</summary>
+        public event EventHandler? ManualClick;
+
+        /// <summary>
+        /// Inicializa una nueva instancia del menú lateral.
+        /// </summary>
+        /// <remarks>
+        /// Configura las opciones del menú, sus eventos y deja seleccionada
+        /// la opción Inicio por defecto.
+        /// </remarks>
         public Sidebar()
         {
             InitializeComponent();
@@ -60,7 +102,12 @@ namespace SistemaHorario.UI.Controls
             SeleccionarItem(pnlInicio, null);
         }
 
-        private void ConfigurarItemMenu(Panel panel, Action accionClick)
+        /// <summary>
+        /// Configura el comportamiento visual y funcional de un elemento del menú.
+        /// </summary>
+        /// <param name="panel">Panel visual asociado a la opción del menú.</param>
+        /// <param name="accionClick">Acción ejecutada al seleccionar la opción.</param>
+        private void ConfigurarItemMenu(Panel panel, Action? accionClick)
         {
             panel.BackColor = colorNormal;
             panel.Cursor = Cursors.Hand;
@@ -78,6 +125,9 @@ namespace SistemaHorario.UI.Controls
             }
         }
 
+        /// <summary>
+        /// Aplica el color de hover cuando el cursor pasa sobre una opción.
+        /// </summary>
         private void AplicarHover(Panel panel)
         {
             if (panelActivo == panel)
@@ -86,6 +136,9 @@ namespace SistemaHorario.UI.Controls
             panel.BackColor = colorHover;
         }
 
+        /// <summary>
+        /// Restaura el color normal cuando el cursor sale de una opción.
+        /// </summary>
         private void QuitarHover(Panel panel)
         {
             if (panelActivo == panel)
@@ -97,7 +150,12 @@ namespace SistemaHorario.UI.Controls
             panel.BackColor = colorNormal;
         }
 
-        private void SeleccionarItem(Panel panelSeleccionado, Action accionClick)
+        /// <summary>
+        /// Marca visualmente una opción como seleccionada y ejecuta su acción asociada.
+        /// </summary>
+        /// <param name="panelSeleccionado">Panel que será marcado como activo.</param>
+        /// <param name="accionClick">Acción asociada a la opción seleccionada.</param>
+        private void SeleccionarItem(Panel panelSeleccionado, Action? accionClick)
         {
             foreach (Panel panel in itemsMenu)
             {
