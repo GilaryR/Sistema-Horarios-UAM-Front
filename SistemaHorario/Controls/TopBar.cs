@@ -8,19 +8,35 @@ using System.Windows.Forms;
 
 namespace SistemaHorario.UI.Controls
 {
+    /// <summary>
+    /// Representa la barra superior principal del sistema.
+    /// </summary>
+    /// <remarks>
+    /// Muestra el título de la aplicación, la información del usuario
+    /// y permite abrir el menú desplegable de opciones del usuario.
+    /// </remarks>
     public partial class TopBar : UserControl
     {
         private readonly Color colorNormal = Color.White;
         private readonly Color colorHover = Color.FromArgb(245, 245, 245);
 
-        public event EventHandler MenuUsuarioClick;
+        /// <summary>
+        /// Evento que se ejecuta al hacer clic en la zona del usuario.
+        /// </summary>
+        public event EventHandler? MenuUsuarioClick;
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la barra superior.
+        /// </summary>
         public TopBar()
         {
             InitializeComponent();
             ConfigurarTopBar();
         }
 
+        /// <summary>
+        /// Configura los elementos visuales principales de la barra superior.
+        /// </summary>
         private void ConfigurarTopBar()
         {
             BackColor = Color.White;
@@ -32,6 +48,9 @@ namespace SistemaHorario.UI.Controls
             ConfigurarZonaUsuario();
         }
 
+        /// <summary>
+        /// Configura el comportamiento visual e interactivo de la zona del usuario.
+        /// </summary>
         private void ConfigurarZonaUsuario()
         {
             pnlUsuarioMenu.BackColor = colorNormal;
@@ -57,11 +76,17 @@ namespace SistemaHorario.UI.Controls
             picFlechaMenu.Click += AbrirMenuUsuario;
         }
 
+        /// <summary>
+        /// Aplica el color de hover a la zona del usuario.
+        /// </summary>
         private void AplicarHoverUsuario()
         {
             pnlUsuarioMenu.BackColor = colorHover;
         }
 
+        /// <summary>
+        /// Restaura el color normal cuando el cursor sale de la zona del usuario.
+        /// </summary>
         private void QuitarHoverUsuario()
         {
             if (pnlUsuarioMenu.ClientRectangle.Contains(pnlUsuarioMenu.PointToClient(Cursor.Position)))
@@ -70,12 +95,20 @@ namespace SistemaHorario.UI.Controls
             pnlUsuarioMenu.BackColor = colorNormal;
         }
 
-        private void AbrirMenuUsuario(object sender, EventArgs e)
+        /// <summary>
+        /// Ejecuta el evento encargado de abrir el menú desplegable del usuario.
+        /// </summary>
+        private void AbrirMenuUsuario(object? sender, EventArgs e)
         {
             MenuUsuarioClick?.Invoke(this, EventArgs.Empty);
         }
 
-        public void ConfigurarUsuario(string textoUsuario, Image imagenUsuario = null)
+        /// <summary>
+        /// Configura el texto y la imagen del usuario mostrados en la barra superior.
+        /// </summary>
+        /// <param name="textoUsuario">Nombre o rol del usuario que se mostrará.</param>
+        /// <param name="imagenUsuario">Imagen opcional del usuario.</param>
+        public void ConfigurarUsuario(string textoUsuario, Image? imagenUsuario = null)
         {
             lblUsuarioMenu.Text = textoUsuario;
 
